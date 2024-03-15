@@ -5,26 +5,8 @@
       "email": "tayyab.hafeez@hazelsoft.org",
       "password": "123456",
       "name": "tayyab"
-    },
-    {
-      "id": "1709120998293",
-      "email": "testa@mailinator.com",
-      "password": "123456",
-      "name": "tayyab"
-    },
-    {
-      "id": "1709204920656",
-      "email": "tayyab.hafeez@s.org",
-      "password": "123456",
-      "name": "tayyab"
-    },
-    {
-      "id": 1710480990346,
-      "email": "tayyab.hafez@hazelsoft.org",
-      "password": "123456",
-      "name": "tayyab"
-    }
+    } 
   ],
   "UserGroupList": [],
-  "UserList": []
+  "UserList": [] 
 }
