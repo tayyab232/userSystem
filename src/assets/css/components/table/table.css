@@ -1,0 +1,197 @@
+.rdt_TableCol {
+  display: flex;
+  min-width: 108px !important;
+  min-height: 40px !important;
+  padding: 5px 16px !important;
+  align-items: center;
+  flex-shrink: 0;
+  color: white !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  white-space: pre-wrap;
+  justify-content: center !important;
+  min-width: 108px !important;
+  font-size: 15.65px !important;
+  line-height: 1.5 !important;
+}
+.rdt_TableCol .rdt_TableCol_Sortable .ms-2.d-flex {
+  align-items: center;
+  overflow: visible;
+}
+.rdt_TableRow {
+  border-bottom: none !important;
+  min-height: 40px !important;
+  border-left: 0.1px solid rgb(128 128 128 / 13%) !important;
+  border-right: 0.1px solid rgb(128 128 128 / 13%) !important;
+}
+
+.rdt_TableRow:last-child .rdt_TableCell:last-child {
+  border-bottom-right-radius: 20px !important;
+  border-right: 0.1px solid rgb(128 128 128 / 18%);
+}
+
+.rdt_TableRow:last-child {
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid #0000000a !important;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.rdt_TableRow:last-child .rdt_TableCell:first-child {
+  border-bottom-left-radius: 20px !important;
+  border-left: 0.1px solid rgb(128 128 128 / 18%);
+}
+
+.table-action-btn {
+  border: none;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+
+.tableContainer {
+  margin-right: 20px;
+}
+
+.rdt_TableCell {
+  min-width: 108px !important;
+  justify-content: center;
+  line-height: 1.5 !important;
+  border-bottom: 1px solid rgba(157, 197, 64, 0.1) !important;
+  background: #fff !important;
+  color: var(--Dark-Grey, #575756) !important;
+  font-size: 13px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  white-space: normal !important;
+  padding: 0px 18px !important;
+}
+
+.erkbiK div:first-child {
+  white-space: normal !important;
+}
+
+.sc-kFCroH {
+  display: none !important;
+}
+
+.eSnilV {
+  overflow: visible !important;
+}
+
+.rdt_TableHeadRow {
+  background-color: red !important;
+  border-radius: 20px 20px 0px 0px !important;
+  border-bottom: 1px solid #dbdbdb !important;
+  min-height: 31px !important;
+  background: var(--color-default) !important;
+}
+
+.rdt_Table {
+  /* min-height: 60vmax !important; */
+  height: auto !important;
+  margin-bottom: 20px;
+}
+
+.ReactDataTable {
+  display: flex !important;
+  min-height: 400px !important;
+  height: auto !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+.rdt_TableRow .rdt_TableCell:last-child {
+  justify-content: center;
+}
+.rdt_Pagination {
+  justify-content: flex-start !important;
+  border-top: none !important;
+  margin-top: 10px;
+
+  span {
+    color: #000 !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+
+  select {
+    color: var(--colors-black-1-primary-text, #313131) !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 20px !important;
+    border-radius: 4px !important;
+    background: var(--colors-White, #fff) !important;
+  }
+
+  .sc-bZHSRq {
+    margin: 0px 8px !important;
+  }
+
+  .iOgnCO {
+    margin: 0px 38px !important;
+  }
+
+  button {
+    svg {
+      fill: #626262 !important;
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+
+  button:hover {
+    background-color: #0066a9 !important;
+    svg {
+      fill: white !important;
+    }
+  }
+}
+
+.searchInput {
+  max-width: 288px;
+  width: 280px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 35px;
+  background: rgba(157, 197, 64, 0.15);
+  border: none;
+  color: var(--Dark-Grey, #575756);
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  padding-left: 60px;
+}
+
+.searchInputDiv {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 6px !important;
+
+  svg {
+    position: absolute;
+    top: 11px;
+    left: 24px;
+  }
+}
+/* .sc-dmXWDj.ibgBY::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+.lnOUep {
+  overflow: hidden;
+  white-space: pre-wrap !important;
+}
+.rdt_TableCol_Sortable .d-flex.w-100 {
+  justify-content: center;
+  text-align: center;
+}
+.rdt_TableCol_Sortable {
+  min-width: 150px;
+}

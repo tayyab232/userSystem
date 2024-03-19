@@ -1,0 +1,13 @@
+.nav-color {
+  background-color: #116466 !important;
+}
+.default-color-two{
+    color: #116466 !important;
+}
+nav.navbar.navbar-expand-lg.bg-body-tertiary.nav-color {
+    height: 55px !important;
+}
+.right-align{
+    position: absolute !important;
+    right: 70px !important;
+}

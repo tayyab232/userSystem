@@ -1,0 +1,45 @@
+.creaete-Button {
+  min-width: 40px;
+  border-radius: 12px !important;
+  background: #116466;
+  text-align: center !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 24px !important;
+  letter-spacing: -0.264px !important;
+  height: 43px !important;
+  border: none !important;
+  letter-spacing: 1px !important;
+}
+.creaete-Button:hover {
+  background: #116466;
+}
+.creaete-Button:active {
+  background: #116466;
+}
+.creaete-Button.show {
+  background: #116466;
+}
+.creaete-Button:focus-visible {
+  background: #116466;
+}
+.btn:first-child:active {
+  background: #116466;
+}
+
+.Create-Account-button:hover {
+  background: #116466;
+}
+.Create-Account-button:active {
+  background: #116466;
+}
+.Create-Account-button:focus-visible {
+  background: #116466;
+}
+.btn:first-child:active {
+  background: #116466;
+}
+.Create-Account-button.show {
+  background: #116466 !important;
+}

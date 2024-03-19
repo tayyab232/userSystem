@@ -1,1 +1,9 @@
-@import "/src//assets/css/form/form.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import "/src//assets/css/views/auth/form.css";
+@import "/src//assets/css/components/sidebar/sidebar.css";
+@import "/src//assets/css/components/navBar//navBar.css";
+@import "/src/assets/css/systemStyle/systemStyle.css";
+@import "/src/assets/css/views/userGroup/userGroup.css";
+@import "/src/assets/css/components/table/table.css";
+@import "~react-toastify/dist/ReactToastify.css";
