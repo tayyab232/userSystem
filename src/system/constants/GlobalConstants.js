@@ -1,10 +1,13 @@
-export const AccountActionType = {
+export const UserActionType = {
   Create: "create",
   Update: "update",
   Delete: "delete",
   Details: "details",
 };
-
+export const actionFor = {
+  USER_PAGE: "userPage",
+  USER_GROUP_PAGE: "userGroupPage",
+};
 export const actionTypeConstant = {
   Deposite: "deposite",
   Withdraw: "withdraw",
@@ -15,11 +18,7 @@ export const educationLevelList = [
   { id: 3, label: "Undergraduate", value: "Undergraduate" },
   { id: 4, label: "Masters Degree", value: "Masters Degree" },
 ];
-export const accountTypeList = [
-  { id: 2, label: "Savings Account", value: "Savings Account" },
-  { id: 3, label: "Piority Acoount", value: "Piority Acoount" },
-  { id: 4, label: "Preferred Accun", value: "Preferred Accun" },
-];
+
 export const genderList = [
   { id: 2, label: "Male", value: "Male" },
   { id: 3, label: "Female", value: "Female" },
@@ -37,6 +36,18 @@ export const accountConstants = {
   UpdateAccount: "UpdateAccount",
 };
 
+export const userGroupConstants = {
+  USERGROUP_CREATED: "UserGroupCreated",
+  GET_USERGROUP: "GetUserGroup",
+  DELETE_USERGROUP: "DeleteUserGroup",
+  UPDATE_USERGROUP: "UpdateUserGroup",
+};
+export const userConstants = {
+  USER_CREATED: "UserCreated",
+  GET_USER: "GetUser",
+  DELETE_USER: "DeleteUser",
+  UPDATE_USER: "UpdateUser",
+};
 export const modalConstants = {
   ModalOpen: "modalOpen",
   SidebaroOpen: "sideBarOpen",
@@ -46,10 +57,17 @@ export const authConstants = {
   Failed: "failed",
   Success: "success",
 };
-
+export const status = {
+  Failed: "failed",
+  Success: "success",
+};
 export const Url = {
   BASE_URL: process.env.REACT_APP_BASE_API_URL,
   USER_LIST: "UserList",
   ACCOUNT_LIST: "AccountList",
   USER_GROUP_LIST: "UserGroupList",
+};
+
+export const localStorageConstants = {
+  CURRENT_USER: "currentUser",
 };

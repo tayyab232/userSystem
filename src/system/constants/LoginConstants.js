@@ -3,4 +3,5 @@ export const LoginConstants = {
   SignUp: "signup",
   Created: "Created",
   CURRENT_USER: "LocalUser",
+  LOADING: "Loading"
 };

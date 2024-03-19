@@ -1,18 +1,25 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
+import { Spinner } from "react-bootstrap";
+import { authActions } from "../../redux/actions/auth.action/auth.actions";
+import { connect } from "react-redux";
 
-const Login = () => {
+import {
+  FormLabel,
+  InputGrouptext,
+} from "../../shared/components/wrapperComponent/wrapperComponent";
+
+const Login = (props) => {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -20,17 +27,15 @@ const Login = () => {
       password: "",
     },
   });
-  const password = watch("password");
 
   const onSubmit = (data) => {
-    console.log({ data });
-    // dispatch(authActions.signUp(data, navigate));
+    props.login(data, navigate);
   };
 
   return (
     <div className="bg-gray">
       <div className="d-flex justify-content-center h-100 min-vh-100 align-items-center">
-        <div class="card p-5 rounded-0 border-0" style={{ width: "30rem" }}>
+        <div class="card p-5 rounded-0 border-0 width-30rem">
           <div class="card-body">
             <div className="border-left ">
               <div className=" ms-2 default-color fs-4 fw-bold">
@@ -45,11 +50,11 @@ const Login = () => {
               onSubmit={handleSubmit(onSubmit)}
             >
               <div class="field fieldSignup mb-3">
-                <Form.Label className="Form-labels light-black">Email</Form.Label>
+                <FormLabel> Email</FormLabel>
                 <InputGroup>
-                  <InputGroup.Text id="basic-addon1" className="rounded-0">
+                  <InputGrouptext>
                     <i class="fa-regular fa-user color-gray"></i>{" "}
-                  </InputGroup.Text>
+                  </InputGrouptext>
                   <Form.Control
                     className={`rounded-0 light-black ${
                       errors.email ? "error-border" : ""
@@ -72,11 +77,11 @@ const Login = () => {
               </div>
               <div className="space"></div>
               <div class="field space fieldSignup mb-3">
-                <Form.Label className="Form-labels light-black">Password </Form.Label>
+                <FormLabel>Password</FormLabel>
                 <InputGroup className="">
-                  <InputGroup.Text id="basic-addon1" className="rounded-0">
+                  <InputGrouptext>
                     <i class="fa-solid fa-key color-gray"></i>{" "}
-                  </InputGroup.Text>
+                  </InputGrouptext>
                   <input
                     className={`form-control light-black rounded-0 ${
                       errors.password ? "error-border" : ""
@@ -84,6 +89,10 @@ const Login = () => {
                     type="password"
                     {...register("password", {
                       required: "Password is required",
+                      pattern: {
+                        value: /^\s*[^\s]+(?:\s+[^\s]+)*\s*$/,
+                        message: "invalid passsword",
+                      },
                       minLength: {
                         value: 6,
                         message: "Password must be at least 6 characters long",
@@ -95,40 +104,12 @@ const Login = () => {
                   <p className=" error-text ">{errors.password.message}</p>
                 )}
               </div>
-              {/* <div class="field fieldSignup mb-3">
-                <Form.Label className="Form-labels ">
-                  Confirm Password
-                </Form.Label>{" "}
-                <InputGroup className="">
-                  <InputGroup.Text id="basic-addon1" className="rounded-0">
-                    @
-                  </InputGroup.Text>
-                  <Form.Control
-                    className={`  rounded-0 ${
-                      errors.password ? "error-border" : ""
-                    }`}
-                    {...register("confirmPassword", {
-                      required: "Confirm Password is required",
-                      validate: (value) =>
-                        value === password || "Passwords do not match",
-                    })}
-                    id="password"
-                    type="password"
-                  />
-                </InputGroup>
-                {errors.confirmPassword && (
-                  <p className=" error-text ">
-                    {errors.confirmPassword.message}
-                  </p>
-                )}
-              </div> */}
-
               <div class="mt-5 mb-2">
                 <Button
                   className="submitButton btn btn-primary  "
                   type="submit"
                 >
-                  Login
+                  {[props.loading ? <Spinner animation="border" /> : "Login"]}
                 </Button>
               </div>
               <div class="signup-link mt-2 d-flex justify-content-center light-black">
@@ -145,4 +126,10 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  loading: state.authReducer.loading,
+});
+const mapDispatchToProps = (dispatch) => ({
+  login: (data, navigate) => dispatch(authActions.login(data, navigate)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
